@@ -25,7 +25,7 @@ public class SunsetViewController: UIViewController {
     
     //MARK: - Functions
     private func requestingInformation() {
-        sunsetView.button.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
+        sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
     }
     
     @objc private func sendRequest() {
