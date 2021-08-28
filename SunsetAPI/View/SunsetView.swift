@@ -12,7 +12,7 @@ public class SunsetView: UIView {
     
     //MARK: - Variables
     lazy var stackView = makeStackView()
-    lazy var imageSunrise = makeImageSunrise()
+    lazy var SunriseImage = makeImageSunrise()
     lazy var labelSunrise = makeLabelSunrise()
     lazy var imageSunset = makeImageSunset()
     lazy var labelSunset = makeLabelSunset()
@@ -37,7 +37,7 @@ public class SunsetView: UIView {
     
     private func addViews() {
         addSubview(stackView)
-        stackView.addArrangedSubview(imageSunrise)
+        stackView.addArrangedSubview(SunriseImage)
         stackView.addArrangedSubview(labelSunrise)
         stackView.addArrangedSubview(imageSunset)
         stackView.addArrangedSubview(labelSunset)
@@ -45,7 +45,7 @@ public class SunsetView: UIView {
     }
     
     private func background() {
-        backgroundColor = .systemBlue
+        backgroundColor = .systemPink
     }
     
     //MARK: - Functions
