@@ -45,7 +45,7 @@ public class SunsetView: UIView {
     }
     
     private func background() {
-        backgroundColor = .systemBlue
+        backgroundColor = .systemPink
     }
     
     //MARK: - Functions
