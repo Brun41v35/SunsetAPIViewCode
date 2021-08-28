@@ -16,7 +16,7 @@ public class SunsetView: UIView {
     lazy var labelSunrise = makeLabelSunrise()
     lazy var imageSunset = makeImageSunset()
     lazy var labelSunset = makeLabelSunset()
-    lazy var button = makeButton()
+    lazy var updateButton = makeButton()
     
     //MARK: - Init
     override init(frame: CGRect) {
@@ -41,7 +41,7 @@ public class SunsetView: UIView {
         stackView.addArrangedSubview(labelSunrise)
         stackView.addArrangedSubview(imageSunset)
         stackView.addArrangedSubview(labelSunset)
-        addSubview(button)
+        addSubview(updateButton)
     }
     
     private func background() {
@@ -108,10 +108,10 @@ public class SunsetView: UIView {
         stackView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
-            make.bottom.equalTo(button.snp.top).inset(5)
+            make.bottom.equalTo(updateButton.snp.top).inset(5)
         }
         
-        button.snp.makeConstraints { make in
+        updateButton.snp.makeConstraints { make in
             make.leading.trailing.equalToSuperview().inset(16)
             make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
             make.height.equalTo(50)
