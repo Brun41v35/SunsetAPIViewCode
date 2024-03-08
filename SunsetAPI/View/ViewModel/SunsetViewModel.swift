@@ -1,6 +1,6 @@
 import Foundation
 
-public class SunsetViewModel {
+final class SunsetViewModel {
     
     //MARK: - Request
     func makeRequesting(completed: @escaping (Surise?, String?) -> Void) {
