@@ -3,10 +3,12 @@ import UIKit
 final class SunsetViewController: UIViewController {
     
     //MARK: - Variables
+
     private let sunsetView = SunsetView()
     private let viewModel = SunsetViewModel()
     
     //MARK: - LifeCycle
+
     public override func loadView() {
         self.view = sunsetView
     }
@@ -17,6 +19,7 @@ final class SunsetViewController: UIViewController {
     }
     
     //MARK: - Functions
+
     private func requestingInformation() {
         sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
     }
