@@ -1,10 +1,6 @@
 import UIKit
 import SnapKit
 
-protocol SunsetViewType where Self: UIView {
-    var didTapButton: (() -> Void)? { get set }
-}
-
 final class SunsetView: UIView, SunsetViewType {
     
     //MARK: - Variables

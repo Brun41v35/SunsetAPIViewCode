@@ -3,10 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */; };
 		FA64858F26CEB974007570AE /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64858E26CEB974007570AE /* NetworkManager.swift */; };
 		FA64859126CEBA47007570AE /* Surise.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64859026CEBA47007570AE /* Surise.swift */; };
 		FA64859326CED5C2007570AE /* SunsetViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA64859226CED5C2007570AE /* SunsetViewModel.swift */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewProtocols.swift; sourceTree = "<group>"; };
 		FA64858E26CEB974007570AE /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		FA64859026CEBA47007570AE /* Surise.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Surise.swift; sourceTree = "<group>"; };
 		FA64859226CED5C2007570AE /* SunsetViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewModel.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				FACFD85826CEAF48007360B3 /* Controller */,
 				FACFD85726CEAF3B007360B3 /* ViewModel */,
 				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
+				7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 				FA64858F26CEB974007570AE /* NetworkManager.swift in Sources */,
 				FA64859126CEBA47007570AE /* Surise.swift in Sources */,
 				FACFD84326CEACE7007360B3 /* SceneDelegate.swift in Sources */,
+				7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */,
 				FACFD85626CEAEDD007360B3 /* SunsetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
