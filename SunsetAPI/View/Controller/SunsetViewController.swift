@@ -1,13 +1,6 @@
-//
-//  SunsetViewController.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import UIKit
 
-public class SunsetViewController: UIViewController {
+final class SunsetViewController: UIViewController {
     
     //MARK: - Variables
     private let sunsetView = SunsetView()
