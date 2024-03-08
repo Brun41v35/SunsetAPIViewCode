@@ -1,23 +1,19 @@
-//
-//  NetworkManager.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import Foundation
 
-class NetworkManager {
+final class NetworkManager {
     
     //MARK: - Variables
+
     static let shared = NetworkManager()
     private let baseURL = "https://api.sunrise-sunset.org/json"
     
     //MARK: - Init
+
     private init() {}
     
     //MARK: - Request
-    func getInformationAPI(completed: @escaping (Surise?, String?) -> Void) {
+
+    func getInformationAPI(completed: @escaping (Sunrise?, String?) -> Void) {
         
         let endpoint = baseURL + "?lat=36.7201600&lng=-4.4203400"
         
@@ -45,7 +41,7 @@ class NetworkManager {
             do {
                 let decoder = JSONDecoder()
                 decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let sunsetInformation = try decoder.decode(Surise.self, from: data)
+                let sunsetInformation = try decoder.decode(Sunrise.self, from: data)
                 completed(sunsetInformation, nil)
             } catch {
                 completed(nil, "The data received from the server is invalid. Please try again 😬")
