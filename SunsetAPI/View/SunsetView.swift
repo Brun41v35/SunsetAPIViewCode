@@ -1,7 +1,11 @@
 import UIKit
 import SnapKit
 
-final class SunsetView: UIView {
+protocol SunsetViewType where Self: UIView {
+    var didTapButton: (() -> Void)? { get set }
+}
+
+final class SunsetView: UIView, SunsetViewType {
     
     //MARK: - Variables
 
@@ -11,6 +15,8 @@ final class SunsetView: UIView {
     lazy var imageSunset = makeImageSunset()
     lazy var labelSunset = makeLabelSunset()
     lazy var updateButton = makeButton()
+
+    var didTapButton: (() -> Void)?
     
     //MARK: - Init
 
@@ -30,6 +36,7 @@ final class SunsetView: UIView {
         addViews()
         addConstraints()
         background()
+        setupActions()
     }
 
     private func addViews() {
@@ -99,6 +106,17 @@ final class SunsetView: UIView {
         button.layer.shadowRadius = 8
         button.layer.masksToBounds = false
         return button
+    }
+
+    private func setupActions() {
+        updateButton.addTarget(self,
+                               action: #selector(didTapButtonAction),
+                               for: .touchUpInside)
+    }
+
+    @objc
+    func didTapButtonAction() {
+        didTapButton?()
     }
     
     //MARK: - Constants
