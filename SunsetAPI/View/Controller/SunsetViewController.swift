@@ -21,13 +21,8 @@ final class SunsetViewController: UIViewController {
     
     //MARK: - LifeCycle
 
-    public override func loadView() {
+    override func loadView() {
         self.view = contentView
-    }
-    
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-//        requestingInformation()
     }
     
     //MARK: - Functions
