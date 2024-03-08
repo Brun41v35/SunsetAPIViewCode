@@ -1,10 +1,3 @@
-//
-//  SunsetViewModel.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import Foundation
 
 public class SunsetViewModel {
