@@ -46,7 +46,7 @@ final class SunsetViewController: UIViewController {
 //    private func requestingInformation() {
 //        sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
 //    }
-    
+
 //    @objc private func sendRequest() {
 //        viewModel.makeRequesting { information, errorMessage in
 //            guard let information = information else {
