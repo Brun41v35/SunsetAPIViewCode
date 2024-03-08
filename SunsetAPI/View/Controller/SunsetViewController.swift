@@ -24,8 +24,17 @@ final class SunsetViewController: UIViewController {
     override func loadView() {
         self.view = contentView
     }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
+    }
     
-    //MARK: - Functions
+    //MARK: - setup
+
+    private func setup() {
+        
+    }
 
 //    private func requestingInformation() {
 //        sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
