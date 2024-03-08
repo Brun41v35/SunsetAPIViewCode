@@ -1,16 +1,10 @@
-//
-//  SunsetView.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import UIKit
 import SnapKit
 
-public class SunsetView: UIView {
+final class SunsetView: UIView {
     
     //MARK: - Variables
+
     lazy var stackView = makeStackView()
     lazy var SunriseImage = makeImageSunrise()
     lazy var labelSunrise = makeLabelSunrise()
@@ -19,22 +13,25 @@ public class SunsetView: UIView {
     lazy var updateButton = makeButton()
     
     //MARK: - Init
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Setup
+
     private func setup() {
         addViews()
         addConstraints()
         background()
     }
-    
+
     private func addViews() {
         addSubview(stackView)
         stackView.addArrangedSubview(SunriseImage)
@@ -49,6 +46,7 @@ public class SunsetView: UIView {
     }
     
     //MARK: - Functions
+
     private func makeStackView() -> UIStackView {
         let stack = UIStackView()
         stack.distribution = .fillEqually
@@ -104,7 +102,9 @@ public class SunsetView: UIView {
     }
     
     //MARK: - Constants
+
     private func addConstraints() {
+
         stackView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
