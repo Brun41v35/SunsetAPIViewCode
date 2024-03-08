@@ -33,7 +33,14 @@ final class SunsetViewController: UIViewController {
     //MARK: - setup
 
     private func setup() {
-        
+        bindLayoutEvents()
+    }
+
+    private func bindLayoutEvents() {
+
+        contentView.didTapButton = { [weak self] in
+            print("Tapped")
+        }
     }
 
 //    private func requestingInformation() {
