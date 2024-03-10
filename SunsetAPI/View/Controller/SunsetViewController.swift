@@ -5,12 +5,14 @@ final class SunsetViewController: UIViewController {
     //MARK: - Variables
 
     private let contentView: SunsetViewType
-    private let viewModel = SunsetViewModel()
+    private let viewModel: SunsetViewModelType
 
     // MARK: Init
 
-    init(contentView: SunsetViewType = SunsetView()) {
+    init(contentView: SunsetViewType = SunsetView(),
+         viewModel: SunsetViewModelType) {
         self.contentView = contentView
+        self.viewModel = viewModel
         super.init(nibName: nil, bundle: nil)
     }
 
