@@ -1,52 +1,36 @@
 import Foundation
 
+enum HTTPClientResult {
+    case success(Sunrise)
+    case error(Error)
+}
+
+protocol URLSessionType {
+    func dataTask(with request: URLRequest, completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
+}
+
+extension URLSession: URLSessionType {}
+
+protocol NetworkManagerType {
+    func loadData()
+}
+
 final class NetworkManager {
-    
-    //MARK: - Variables
 
-    static let shared = NetworkManager()
-    private let baseURL = "https://api.sunrise-sunset.org/json"
-    
-    //MARK: - Init
+    // MARK: Private Properties
 
-    private init() {}
-    
-    //MARK: - Request
+    private var session: URLSessionType
 
-    func getInformationAPI(completed: @escaping (Sunrise?, String?) -> Void) {
-        
-        let endpoint = baseURL + "?lat=36.7201600&lng=-4.4203400"
-        
-        guard let url = URL(string: endpoint) else {
-            completed(nil, "Something wrong happens.. 😖")
-            return
-        }
-        
-        let task = URLSession.shared.dataTask(with: url) { data, response, error in
-            
-            if let _ = error {
-                completed(nil, "Uneble to complete.. Check your internet.. 😓")
-            }
-            
-            guard let response = response as? HTTPURLResponse, response.statusCode == 200 else {
-                completed(nil, "Invalid response from the server. Please try again 😬")
-                return
-            }
-            
-            guard let data = data else {
-                completed(nil, "The data received from the server is invalid. Please try again 😬")
-                return
-            }
-            
-            do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let sunsetInformation = try decoder.decode(Sunrise.self, from: data)
-                completed(sunsetInformation, nil)
-            } catch {
-                completed(nil, "The data received from the server is invalid. Please try again 😬")
-            }
-        }        
-        task.resume()
+    // MARK: - Init
+
+    init(session: URLSessionType = URLSession.shared) {
+        self.session = session
+    }
+}
+
+extension NetworkManager: NetworkManagerType {
+
+    func loadData() {
+//        let endpoint = baseURL + "?lat=36.7201600&lng=-4.4203400"
     }
 }
