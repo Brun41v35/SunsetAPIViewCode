@@ -1,23 +1,8 @@
 import Foundation
 
-enum HTTPClientResult {
-    case success(Sunrise)
-    case error(Error)
-}
-
-protocol URLSessionType {
-    func dataTask(with request: URLRequest, completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask
-}
-
-extension URLSession: URLSessionType {}
-
-protocol NetworkManagerType {
-    func loadData()
-}
-
 final class NetworkManager {
 
-    // MARK: Private Properties
+    // MARK: - Private Properties
 
     private var session: URLSessionType
 
