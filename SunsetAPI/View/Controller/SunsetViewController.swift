@@ -7,7 +7,7 @@ final class SunsetViewController: UIViewController {
     private let contentView: SunsetViewType
     private let viewModel: SunsetViewModelType
 
-    // MARK: Init
+    // MARK: - Init
 
     init(contentView: SunsetViewType = SunsetView(),
          viewModel: SunsetViewModelType) {
