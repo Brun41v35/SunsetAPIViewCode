@@ -44,22 +44,5 @@ final class SunsetViewController: UIViewController {
             print("Tapped")
         }
     }
-
-//    private func requestingInformation() {
-//        sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
-//    }
-
-//    @objc private func sendRequest() {
-//        viewModel.makeRequesting { information, errorMessage in
-//            guard let information = information else {
-//                print("Erro")
-//                return
-//            }
-//            DispatchQueue.main.async {
-//                self.contentView.labelSunrise.text = information.results.sunrise
-//                self.contentView.labelSunset.text = information.results.sunset
-//            }
-//        }
-//    }
 }
 
