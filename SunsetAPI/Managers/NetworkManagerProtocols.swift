@@ -5,5 +5,5 @@ protocol URLSessionType {
 }
 
 protocol NetworkManagerType {
-    func loadData()
+    func loadData(with baseURL: String, completion: @escaping APIResult)
 }
