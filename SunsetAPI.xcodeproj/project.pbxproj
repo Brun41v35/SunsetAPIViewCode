@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E0AE8132BBF785C00B16815 /* SunsetProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */; };
 		7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
 		7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */; };
@@ -24,6 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetProtocols.swift; sourceTree = "<group>"; };
 		7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
@@ -118,6 +120,7 @@
 				FACFD85726CEAF3B007360B3 /* ViewModel */,
 				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
 				7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */,
+				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 				FACFD85A26CEAF5D007360B3 /* SunsetView.swift in Sources */,
 				FACFD84126CEACE7007360B3 /* AppDelegate.swift in Sources */,
 				7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */,
+				7E0AE8132BBF785C00B16815 /* SunsetProtocols.swift in Sources */,
 				FA64859326CED5C2007570AE /* SunsetViewModel.swift in Sources */,
 				FA64858F26CEB974007570AE /* NetworkManager.swift in Sources */,
 				7EE56EE02BBE3C9C0098E030 /* HTTPClientResult.swift in Sources */,
