@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7E0AE8132BBF785C00B16815 /* SunsetProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */; };
+		7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */; };
 		7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
 		7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */; };
@@ -37,6 +38,7 @@
 /* Begin PBXFileReference section */
 		7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetProtocols.swift; sourceTree = "<group>"; };
 		7E0AE8182BBF7DF700B16815 /* SunsetAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
@@ -76,8 +78,17 @@
 		7E0AE8192BBF7DF700B16815 /* SunsetAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				7E0AE8212BBF7E4300B16815 /* Managers */,
 			);
 			path = SunsetAPITests;
+			sourceTree = "<group>";
+		};
+		7E0AE8212BBF7E4300B16815 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 		FA64858C26CEB56D007570AE /* Managers */ = {
@@ -106,6 +117,7 @@
 				FACFD84226CEACE7007360B3 /* SceneDelegate.swift */,
 				FACFD84926CEACEA007360B3 /* Assets.xcassets */,
 				FACFD84B26CEACEA007360B3 /* LaunchScreen.storyboard */,
+				FACFD84E26CEACEA007360B3 /* Info.plist */,
 			);
 			path = Supports;
 			sourceTree = "<group>";
@@ -135,7 +147,6 @@
 				FA64858C26CEB56D007570AE /* Managers */,
 				FACFD85426CEAECF007360B3 /* View */,
 				FA64859426CEDD3C007570AE /* Supports */,
-				FACFD84E26CEACEA007360B3 /* Info.plist */,
 			);
 			path = SunsetAPI;
 			sourceTree = "<group>";
@@ -220,6 +231,7 @@
 				TargetAttributes = {
 					7E0AE8172BBF7DF700B16815 = {
 						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
 						TestTargetID = FACFD83C26CEACE7007360B3;
 					};
 					FACFD83C26CEACE7007360B3 = {
@@ -273,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,6 +336,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QXX4852TTD;
@@ -340,6 +354,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SunsetAPI.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SunsetAPI";
@@ -352,6 +367,7 @@
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = QXX4852TTD;
@@ -497,7 +513,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59R2NH27HK;
-				INFOPLIST_FILE = SunsetAPI/Info.plist;
+				INFOPLIST_FILE = SunsetAPI/Supports/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -520,7 +537,8 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 59R2NH27HK;
-				INFOPLIST_FILE = SunsetAPI/Info.plist;
+				INFOPLIST_FILE = SunsetAPI/Supports/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
