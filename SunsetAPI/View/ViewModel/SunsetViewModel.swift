@@ -15,7 +15,7 @@ final class SunsetViewModel {
     //MARK: - Private Methods
 
     private func fetchData() {
-        network.loadData(with: "") { result in
+        network.loadData { result in
             switch result {
             case .success:
                 print("Success")

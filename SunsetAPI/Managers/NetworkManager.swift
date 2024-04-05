@@ -15,9 +15,11 @@ final class NetworkManager {
 
 extension NetworkManager: NetworkManagerType {
 
-    func loadData(with baseURL: String, completion: @escaping APIResult) {
+    func loadData(completion: @escaping APIResult) {
 
+        let baseURL = "https://api.sunrise-sunset.org/json"
         let endpoint = baseURL + "?lat=36.7201600&lng=-4.4203400"
+
         guard let url = URL(string: endpoint) else { return }
         let request = URLRequest(url: url)
 
