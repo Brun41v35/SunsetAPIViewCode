@@ -7,8 +7,19 @@ final class NetworkManagerTests: XCTestCase {
         let sessionMock = URLSessionMock()
         let sut = NetworkManager(session: sessionMock)
 
-        sut.loadData(with: "") { _ in }
+        sut.loadData { _ in }
 
         XCTAssertEqual(sessionMock.dataTaskCallCount, 1)
+    }
+
+    func test_loadData_shouldHaveTheRightURL() {
+        let sessionMock = URLSessionMock()
+        let sut = NetworkManager(session: sessionMock)
+        let url = URL(string: "https://api.sunrise-sunset.org/json?lat=36.7201600&lng=-4.4203400")!
+        let request = URLRequest(url: url)
+
+        sut.loadData { _ in }
+
+        XCTAssertEqual(sessionMock.dataTaskArgsRequest.first, request)
     }
 }
