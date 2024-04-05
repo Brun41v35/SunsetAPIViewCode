@@ -2,16 +2,35 @@ import Foundation
 
 final class SunsetViewModel {
     
-    //MARK: - Request
+    //MARK: - Private Methods
 
-    func makeRequesting(completed: @escaping (Sunrise?, String?) -> Void) {
+    private let network: NetworkManagerType
 
-        NetworkManager.shared.getInformationAPI { information, errorMessage in
-            guard let information = information else {
-                completed(nil, errorMessage)
-                return
+    //MARK: - Init
+
+    init(network: NetworkManagerType) {
+        self.network = network
+    }
+
+    //MARK: - Private Methods
+
+    private func fetchData() {
+        network.loadData(with: "") { result in
+            switch result {
+            case .success:
+                print("Success")
+            case .failure:
+                print("Error")
             }
-            completed(information, nil)
         }
+    }
+}
+
+// MARK: - SunsetViewModelType
+
+extension SunsetViewModel: SunsetViewModelType {
+
+    func loadData() {
+        fetchData()
     }
 }
