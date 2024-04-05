@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		7E0AE8132BBF785C00B16815 /* SunsetProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */; };
 		7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */; };
+		7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */; };
+		7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */; };
 		7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
 		7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */; };
@@ -39,6 +41,8 @@
 		7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetProtocols.swift; sourceTree = "<group>"; };
 		7E0AE8182BBF7DF700B16815 /* SunsetAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SunsetAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
+		7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
+		7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyURLSessionDataTask.swift; sourceTree = "<group>"; };
 		7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
@@ -86,9 +90,19 @@
 		7E0AE8212BBF7E4300B16815 /* Managers */ = {
 			isa = PBXGroup;
 			children = (
+				7E0AE8242BBF909500B16815 /* Doubles */,
 				7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		7E0AE8242BBF909500B16815 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */,
+				7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		FA64858C26CEB56D007570AE /* Managers */ = {
@@ -285,6 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */,
+				7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */,
 				7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
