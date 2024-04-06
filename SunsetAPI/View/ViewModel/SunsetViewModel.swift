@@ -19,8 +19,8 @@ final class SunsetViewModel {
             switch result {
             case .success:
                 print("Success")
-            case .failure:
-                print("Error")
+            case .failure(let error):
+                print("\(error.localizedDescription)")
             }
         }
     }
