@@ -12,6 +12,7 @@
 		7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */; };
 		7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */; };
 		7EA59BEE2BC3310700EDFEDC /* SunsetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */; };
+		7EA59BF02BC3396700EDFEDC /* SunsetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
 		7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */; };
 		7EE56EE02BBE3C9C0098E030 /* HTTPClientResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDF2BBE3C9C0098E030 /* HTTPClientResult.swift */; };
@@ -44,6 +45,7 @@
 		7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyURLSessionDataTask.swift; sourceTree = "<group>"; };
 		7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetModel.swift; sourceTree = "<group>"; };
+		7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAdapter.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 		7EE56EDF2BBE3C9C0098E030 /* HTTPClientResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientResult.swift; sourceTree = "<group>"; };
@@ -173,6 +175,7 @@
 				FACFD85726CEAF3B007360B3 /* ViewModel */,
 				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
 				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
+				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FACFD85A26CEAF5D007360B3 /* SunsetView.swift in Sources */,
+				7EA59BF02BC3396700EDFEDC /* SunsetAdapter.swift in Sources */,
 				FACFD84126CEACE7007360B3 /* AppDelegate.swift in Sources */,
 				7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */,
 				7EA59BEE2BC3310700EDFEDC /* SunsetModel.swift in Sources */,
