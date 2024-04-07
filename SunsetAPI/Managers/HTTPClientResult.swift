@@ -7,4 +7,4 @@ enum APIError: Error {
     case unableToComplete
 }
 
-typealias APIResult = (Result<Sunrise, APIError>) -> Void
+typealias APIResult = Result<Sunrise, APIError>
