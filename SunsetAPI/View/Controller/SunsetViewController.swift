@@ -39,7 +39,6 @@ final class SunsetViewController: UIViewController {
     }
 
     private func bindLayoutEvents() {
-
         contentView.didTapButton = { [weak self] in
             self?.viewModel.loadData()
         }
