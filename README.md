@@ -6,7 +6,6 @@ Hello, through this project, i could learn about request in Swift and view code 
 * MVVM 😋
 * SnapKit 😍
 * Swift Package Manager 😚
-* Singleton 😋
 
 # Images 💖
 <p float="left">
