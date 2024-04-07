@@ -1,13 +1,13 @@
 import Foundation
 
-struct Sunrise: Codable {
+struct Sunrise: Decodable, Equatable {
     
     //MARK: - Properties
 
     let results: Results
 }
 
-struct Results: Codable {
+struct Results: Decodable, Equatable  {
 
     //MARK: - Properties
 
