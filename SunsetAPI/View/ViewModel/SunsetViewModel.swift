@@ -1,8 +1,12 @@
 import Foundation
 
 final class SunsetViewModel {
+
+    // MARK: - Internal Properties
+
+    weak var viewController: SunsetViewControllerType?
     
-    //MARK: - Private Methods
+    //MARK: - Private Properties
 
     private let network: NetworkManagerType
 
@@ -15,10 +19,12 @@ final class SunsetViewModel {
     //MARK: - Private Methods
 
     private func fetchData() {
-        network.loadData { result in
+        network.loadData { [weak self] result in
             switch result {
-            case .success:
-                print("Success")
+            case .success(let response):
+                let viewModel = SunsetModel(sunrise: response.results.sunrise,
+                                            sunset: response.results.sunset)
+                self?.viewController?.show(viewModel: viewModel)
             case .failure(let error):
                 print("\(error.localizedDescription)")
             }
