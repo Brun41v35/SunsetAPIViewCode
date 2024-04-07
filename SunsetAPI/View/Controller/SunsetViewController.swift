@@ -45,3 +45,11 @@ final class SunsetViewController: UIViewController {
     }
 }
 
+// MARK: - SunsetViewType
+
+extension SunsetViewController: SunsetViewControllerType {
+
+    func show(viewModel: SunsetModel) {
+        contentView.show(viewModel: viewModel)
+    }
+}
