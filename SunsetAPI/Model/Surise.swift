@@ -1,21 +1,16 @@
-//
-//  Model.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import Foundation
 
-struct Surise: Codable {
+struct Sunrise: Decodable, Equatable {
     
     //MARK: - Properties
+
     let results: Results
 }
 
-struct Results: Codable {
-    
+struct Results: Decodable, Equatable  {
+
     //MARK: - Properties
+
     let sunrise: String
     let sunset: String
 }
