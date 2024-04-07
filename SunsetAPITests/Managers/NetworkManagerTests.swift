@@ -24,10 +24,43 @@ final class NetworkManagerTests: XCTestCase {
     }
 
     func test_loadData_shouldReturnSuccessResponse() {
-        
+        let sessionMock = URLSessionMock()
+        let sut = NetworkManager(session: sessionMock)
+
+        let expectation = expectation(description: "completion called")
+        var capturedResult: APIResult!
+
+        sut.loadData { result in
+            capturedResult = result
+            expectation.fulfill()
+        }
+
+        sessionMock.dataTaskArgsCompletionHandler.first?(
+            jsonData(),
+            response(with: 200),
+            nil
+        )
+
+        wait(for: [expectation], timeout: 1.0)
+
+        let valueToTest = returnCapturedResult(capturedResult: capturedResult)
+
+        let sunrise = Sunrise(results: Results(sunrise: "5:54:07 AM", sunset: "6:45:46 PM"))
+
+        XCTAssertEqual(valueToTest, sunrise)
     }
 
     // MARK: - Helpers
+
+    private func returnCapturedResult(capturedResult: APIResult) -> Sunrise? {
+        switch capturedResult {
+        case let .success(response):
+            return response
+        default:
+            XCTFail("Expected success, got ERROR instead")
+            return nil
+        }
+    }
 
     private func jsonData() -> Data {
         """
