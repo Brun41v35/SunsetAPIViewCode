@@ -15,12 +15,15 @@ final class NetworkManager {
 
 extension NetworkManager: NetworkManagerType {
 
-    func loadData(completion: @escaping APIResult) {
-
+    func loadData(completion: @escaping (APIResult) -> Void) {
         let baseURL = "https://api.sunrise-sunset.org/json"
         let endpoint = baseURL + "?lat=36.7201600&lng=-4.4203400"
 
-        guard let url = URL(string: endpoint) else { return }
+        guard let url = URL(string: endpoint) else {
+            completion(.failure(.invalidURL))
+            return
+        }
+
         let request = URLRequest(url: url)
 
         let dataTask = session.dataTask(with: request) { data, response, error in
