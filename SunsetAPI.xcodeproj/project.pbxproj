@@ -11,7 +11,6 @@
 		7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */; };
 		7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */; };
 		7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */; };
-		7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
 		7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */; };
 		7EE56EE02BBE3C9C0098E030 /* HTTPClientResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDF2BBE3C9C0098E030 /* HTTPClientResult.swift */; };
@@ -43,7 +42,6 @@
 		7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyURLSessionDataTask.swift; sourceTree = "<group>"; };
-		7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
 		7EE56EDD2BBE3C810098E030 /* URLSession+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLSession+Ext.swift"; sourceTree = "<group>"; };
 		7EE56EDF2BBE3C9C0098E030 /* HTTPClientResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientResult.swift; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				FACFD85826CEAF48007360B3 /* Controller */,
 				FACFD85726CEAF3B007360B3 /* ViewModel */,
 				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
-				7E0DE9B22B9B459D00079D5E /* SunsetViewProtocols.swift */,
 				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
 			);
 			path = View;
@@ -318,7 +315,6 @@
 				7EE56EE02BBE3C9C0098E030 /* HTTPClientResult.swift in Sources */,
 				FA64859126CEBA47007570AE /* Surise.swift in Sources */,
 				FACFD84326CEACE7007360B3 /* SceneDelegate.swift in Sources */,
-				7E0DE9B32B9B459D00079D5E /* SunsetViewProtocols.swift in Sources */,
 				7EE56EDE2BBE3C810098E030 /* URLSession+Ext.swift in Sources */,
 				FACFD85626CEAEDD007360B3 /* SunsetViewController.swift in Sources */,
 			);
