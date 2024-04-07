@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-final class SunsetView: UIView, SunsetViewType {
+final class SunsetView: UIView {
     
     //MARK: - Variables
 
@@ -130,5 +130,15 @@ final class SunsetView: UIView, SunsetViewType {
             make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
             make.height.equalTo(50)
         }
+    }
+}
+
+// MARK: - SunsetViewType
+
+extension SunsetView: SunsetViewType {
+
+    func show(viewModel: SunsetModel) {
+        labelSunrise.text = viewModel.sunrise
+        labelSunset.text = viewModel.sunset
     }
 }
