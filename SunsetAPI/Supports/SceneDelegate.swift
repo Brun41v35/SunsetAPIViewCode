@@ -16,9 +16,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let network = NetworkManager()
         let viewModel = SunsetViewModel(network: network)
+        let viewController = SunsetViewController(viewModel: viewModel)
+        viewModel.viewController = viewController
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = SunsetViewController(viewModel: viewModel)
+        window?.rootViewController = viewController
         window?.makeKeyAndVisible()
     }
 
