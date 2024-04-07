@@ -1,40 +1,40 @@
-//
-//  SunsetView.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import UIKit
 import SnapKit
 
-public class SunsetView: UIView {
+final class SunsetView: UIView {
     
     //MARK: - Variables
+
     lazy var stackView = makeStackView()
     lazy var SunriseImage = makeImageSunrise()
     lazy var labelSunrise = makeLabelSunrise()
     lazy var imageSunset = makeImageSunset()
     lazy var labelSunset = makeLabelSunset()
     lazy var updateButton = makeButton()
+
+    var didTapButton: (() -> Void)?
     
     //MARK: - Init
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         setup()
     }
-    
+
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     //MARK: - Setup
+
     private func setup() {
         addViews()
         addConstraints()
         background()
+        setupActions()
     }
-    
+
     private func addViews() {
         addSubview(stackView)
         stackView.addArrangedSubview(SunriseImage)
@@ -49,6 +49,7 @@ public class SunsetView: UIView {
     }
     
     //MARK: - Functions
+
     private func makeStackView() -> UIStackView {
         let stack = UIStackView()
         stack.distribution = .fillEqually
@@ -102,9 +103,22 @@ public class SunsetView: UIView {
         button.layer.masksToBounds = false
         return button
     }
+
+    private func setupActions() {
+        updateButton.addTarget(self,
+                               action: #selector(didTapButtonAction),
+                               for: .touchUpInside)
+    }
+
+    @objc
+    func didTapButtonAction() {
+        didTapButton?()
+    }
     
     //MARK: - Constants
+
     private func addConstraints() {
+
         stackView.snp.makeConstraints { make in
             make.top.equalTo(safeAreaLayoutGuide)
             make.leading.trailing.equalToSuperview()
@@ -116,5 +130,15 @@ public class SunsetView: UIView {
             make.bottom.equalTo(safeAreaLayoutGuide).inset(20)
             make.height.equalTo(50)
         }
+    }
+}
+
+// MARK: - SunsetViewType
+
+extension SunsetView: SunsetViewType {
+
+    func show(viewModel: SunsetModel) {
+        labelSunrise.text = viewModel.sunrise
+        labelSunset.text = viewModel.sunset
     }
 }

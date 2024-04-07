@@ -1,44 +1,55 @@
-//
-//  SunsetViewController.swift
-//  SunsetAPI
-//
-//  Created by Bruno Silva on 19/08/21.
-//
-
 import UIKit
 
-public class SunsetViewController: UIViewController {
+final class SunsetViewController: UIViewController {
     
     //MARK: - Variables
-    private let sunsetView = SunsetView()
-    private let viewModel = SunsetViewModel()
+
+    private let contentView: SunsetViewType
+    private let viewModel: SunsetViewModelType
+
+    // MARK: - Init
+
+    init(contentView: SunsetViewType = SunsetView(),
+         viewModel: SunsetViewModelType) {
+        self.contentView = contentView
+        self.viewModel = viewModel
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    @available(*, unavailable)
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     //MARK: - LifeCycle
-    public override func loadView() {
-        self.view = sunsetView
+
+    override func loadView() {
+        self.view = contentView
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setup()
     }
     
-    public override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        requestingInformation()
+    //MARK: - setup
+
+    private func setup() {
+        bindLayoutEvents()
     }
-    
-    //MARK: - Functions
-    private func requestingInformation() {
-        sunsetView.updateButton.addTarget(self, action: #selector(sendRequest), for: .touchUpInside)
-    }
-    
-    @objc private func sendRequest() {
-        viewModel.makeRequesting { information, errorMessage in
-            guard let information = information else {
-                print("Erro")
-                return
-            }
-            DispatchQueue.main.async {
-                self.sunsetView.labelSunrise.text = information.results.sunrise
-                self.sunsetView.labelSunset.text = information.results.sunset
-            }
+
+    private func bindLayoutEvents() {
+        contentView.didTapButton = { [weak self] in
+            self?.viewModel.loadData()
         }
     }
 }
 
+// MARK: - SunsetViewType
+
+extension SunsetViewController: SunsetViewControllerType {
+
+    func show(viewModel: SunsetModel) {
+        contentView.show(viewModel: viewModel)
+    }
+}
