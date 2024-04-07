@@ -50,7 +50,46 @@ final class NetworkManagerTests: XCTestCase {
         XCTAssertEqual(valueToTest, sunrise)
     }
 
+    func test_loadData_shouldReturnErrorResponse() {
+        let sessionMock = URLSessionMock()
+        let sut = NetworkManager(session: sessionMock)
+
+        let expectation = expectation(description: "completion called")
+        var capturedResult: APIResult!
+
+        sut.loadData { result in
+            capturedResult = result
+            expectation.fulfill()
+        }
+
+        sessionMock.dataTaskArgsCompletionHandler.first?(
+            nil,
+            nil,
+            anyNSError()
+        )
+
+        wait(for: [expectation], timeout: 1.0)
+
+        let valueToTest = resultErrorFor(capturedResult: capturedResult)
+
+        XCTAssertNotNil(valueToTest)
+    }
+
     // MARK: - Helpers
+
+    func anyNSError() -> NSError {
+        return NSError(domain: "any error", code: 0)
+    }
+
+    private func resultErrorFor(capturedResult: APIResult) -> Error? {
+        switch capturedResult {
+        case let .failure(error):
+            return error
+        default:
+            XCTFail("Expected failure, got ERROR instead")
+            return nil
+        }
+    }
 
     private func returnCapturedResult(capturedResult: APIResult) -> Sunrise? {
         switch capturedResult {

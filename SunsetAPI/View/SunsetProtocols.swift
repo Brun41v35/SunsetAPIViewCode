@@ -13,3 +13,7 @@ protocol SunsetViewType where Self: UIView {
     var didTapButton: (() -> Void)? { get set }
     func show(viewModel: SunsetModel)
 }
+
+protocol SunsetAdapterType {
+    func adapt(with response: Sunrise) -> SunsetModel
+}
