@@ -50,6 +50,8 @@ final class SunsetViewController: UIViewController {
 extension SunsetViewController: SunsetViewControllerType {
 
     func show(viewModel: SunsetModel) {
-        contentView.show(viewModel: viewModel)
+        DispatchQueue.main.async {
+            self.contentView.show(viewModel: viewModel)
+        }
     }
 }
