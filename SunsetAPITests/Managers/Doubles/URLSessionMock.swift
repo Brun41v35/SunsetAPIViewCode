@@ -1,7 +1,7 @@
 import Foundation
 @testable import SunsetAPI
 
-final class URLSessionMock: URLSessionType {
+final class URLSessionMock {
 
     // MARK: - Private Properties
 
@@ -9,8 +9,11 @@ final class URLSessionMock: URLSessionType {
     private(set) var dataTaskArgsRequest = [URLRequest]()
     private(set) var dataTaskArgsCompletionHandler = [(Data?, URLResponse?, Error?) -> Void]()
     private let dummyURLSession = DummyURLSessionDataTask()
+}
 
-    // MARK: - Methods
+// MARK: - Extension
+
+extension URLSessionMock: URLSessionType {
 
     func dataTask(with request: URLRequest,
                   completionHandler: @escaping @Sendable (Data?, URLResponse?, Error?) -> Void) -> URLSessionDataTask {
