@@ -9,11 +9,14 @@ final class SunsetViewModel {
     //MARK: - Private Properties
 
     private let network: NetworkManagerType
+    private let adapter: SunsetAdapterType
 
     //MARK: - Init
 
-    init(network: NetworkManagerType) {
+    init(network: NetworkManagerType,
+         adapter: SunsetAdapterType = SunsetAdapter()) {
         self.network = network
+        self.adapter = adapter
     }
 
     //MARK: - Private Methods
@@ -22,8 +25,7 @@ final class SunsetViewModel {
         network.loadData { [weak self] result in
             switch result {
             case .success(let response):
-                let viewModel = SunsetModel(sunrise: response.results.sunrise,
-                                            sunset: response.results.sunset)
+                guard let viewModel = self?.adapter.adapt(with: response) else { return }
                 self?.viewController?.show(viewModel: viewModel)
             case .failure(let error):
                 print("\(error.localizedDescription)")
