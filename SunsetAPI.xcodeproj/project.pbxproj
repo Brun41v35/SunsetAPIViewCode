@@ -11,6 +11,8 @@
 		7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */; };
 		7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */; };
 		7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */; };
+		7E26B8A62BC4AAEB00011E71 /* SunsetAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26B8A52BC4AAEB00011E71 /* SunsetAdapterTests.swift */; };
+		7E26B8A92BC4ACEF00011E71 /* Sunrise+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */; };
 		7EA59BEE2BC3310700EDFEDC /* SunsetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */; };
 		7EA59BF02BC3396700EDFEDC /* SunsetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
@@ -44,6 +46,8 @@
 		7E0AE8222BBF7E6500B16815 /* NetworkManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerTests.swift; sourceTree = "<group>"; };
 		7E0AE8252BBF90A000B16815 /* URLSessionMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionMock.swift; sourceTree = "<group>"; };
 		7E0AE8272BBF918300B16815 /* DummyURLSessionDataTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyURLSessionDataTask.swift; sourceTree = "<group>"; };
+		7E26B8A52BC4AAEB00011E71 /* SunsetAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAdapterTests.swift; sourceTree = "<group>"; };
+		7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sunrise+Stub.swift"; sourceTree = "<group>"; };
 		7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetModel.swift; sourceTree = "<group>"; };
 		7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAdapter.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
@@ -84,6 +88,7 @@
 		7E0AE8192BBF7DF700B16815 /* SunsetAPITests */ = {
 			isa = PBXGroup;
 			children = (
+				7E26B8A32BC4AACB00011E71 /* Scene */,
 				7E0AE8212BBF7E4300B16815 /* Managers */,
 			);
 			path = SunsetAPITests;
@@ -117,6 +122,31 @@
 				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
 			);
 			path = Sunset;
+			sourceTree = "<group>";
+		};
+		7E26B8A32BC4AACB00011E71 /* Scene */ = {
+			isa = PBXGroup;
+			children = (
+				7E26B8A42BC4AAD600011E71 /* Sunset */,
+			);
+			path = Scene;
+			sourceTree = "<group>";
+		};
+		7E26B8A42BC4AAD600011E71 /* Sunset */ = {
+			isa = PBXGroup;
+			children = (
+				7E26B8A72BC4ACDE00011E71 /* Doubles */,
+				7E26B8A52BC4AAEB00011E71 /* SunsetAdapterTests.swift */,
+			);
+			path = Sunset;
+			sourceTree = "<group>";
+		};
+		7E26B8A72BC4ACDE00011E71 /* Doubles */ = {
+			isa = PBXGroup;
+			children = (
+				7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */,
+			);
+			path = Doubles;
 			sourceTree = "<group>";
 		};
 		FA64858C26CEB56D007570AE /* Managers */ = {
@@ -311,7 +341,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */,
+				7E26B8A62BC4AAEB00011E71 /* SunsetAdapterTests.swift in Sources */,
 				7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */,
+				7E26B8A92BC4ACEF00011E71 /* Sunrise+Stub.swift in Sources */,
 				7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
