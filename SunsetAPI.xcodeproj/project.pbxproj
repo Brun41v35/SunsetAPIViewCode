@@ -107,6 +107,18 @@
 			path = Doubles;
 			sourceTree = "<group>";
 		};
+		7E26B8A22BC4AA6600011E71 /* Sunset */ = {
+			isa = PBXGroup;
+			children = (
+				FACFD85826CEAF48007360B3 /* Controller */,
+				FACFD85726CEAF3B007360B3 /* ViewModel */,
+				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
+				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
+				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
+			);
+			path = Sunset;
+			sourceTree = "<group>";
+		};
 		FA64858C26CEB56D007570AE /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -171,11 +183,7 @@
 		FACFD85426CEAECF007360B3 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FACFD85826CEAF48007360B3 /* Controller */,
-				FACFD85726CEAF3B007360B3 /* ViewModel */,
-				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
-				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
-				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
+				7E26B8A22BC4AA6600011E71 /* Sunset */,
 			);
 			path = View;
 			sourceTree = "<group>";
