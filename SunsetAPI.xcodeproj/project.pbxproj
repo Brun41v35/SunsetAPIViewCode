@@ -174,18 +174,18 @@
 			children = (
 				FA64858D26CEB890007570AE /* Model */,
 				FA64858C26CEB56D007570AE /* Managers */,
-				FACFD85426CEAECF007360B3 /* View */,
+				FACFD85426CEAECF007360B3 /* Scene */,
 				FA64859426CEDD3C007570AE /* Supports */,
 			);
 			path = SunsetAPI;
 			sourceTree = "<group>";
 		};
-		FACFD85426CEAECF007360B3 /* View */ = {
+		FACFD85426CEAECF007360B3 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				7E26B8A22BC4AA6600011E71 /* Sunset */,
 			);
-			path = View;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		FACFD85726CEAF3B007360B3 /* ViewModel */ = {
