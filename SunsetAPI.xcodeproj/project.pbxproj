@@ -15,6 +15,8 @@
 		7E26B8A92BC4ACEF00011E71 /* Sunrise+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */; };
 		7E36E2D82BC622E9002D02DB /* SunsetViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36E2D72BC622E9002D02DB /* SunsetViewModelTests.swift */; };
 		7E36E2DA2BC624BD002D02DB /* NetworkManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36E2D92BC624BD002D02DB /* NetworkManagerMock.swift */; };
+		7E36E2DC2BC627B0002D02DB /* SunsetAdapterMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36E2DB2BC627B0002D02DB /* SunsetAdapterMock.swift */; };
+		7E36E2DE2BC62897002D02DB /* SunsetModel+Stub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E36E2DD2BC62897002D02DB /* SunsetModel+Stub.swift */; };
 		7EA59BEE2BC3310700EDFEDC /* SunsetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */; };
 		7EA59BF02BC3396700EDFEDC /* SunsetAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */; };
 		7EE56EDC2BBE3C530098E030 /* NetworkManagerProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */; };
@@ -52,6 +54,8 @@
 		7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Sunrise+Stub.swift"; sourceTree = "<group>"; };
 		7E36E2D72BC622E9002D02DB /* SunsetViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetViewModelTests.swift; sourceTree = "<group>"; };
 		7E36E2D92BC624BD002D02DB /* NetworkManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerMock.swift; sourceTree = "<group>"; };
+		7E36E2DB2BC627B0002D02DB /* SunsetAdapterMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAdapterMock.swift; sourceTree = "<group>"; };
+		7E36E2DD2BC62897002D02DB /* SunsetModel+Stub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SunsetModel+Stub.swift"; sourceTree = "<group>"; };
 		7EA59BED2BC3310700EDFEDC /* SunsetModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetModel.swift; sourceTree = "<group>"; };
 		7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SunsetAdapter.swift; sourceTree = "<group>"; };
 		7EE56EDB2BBE3C520098E030 /* NetworkManagerProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManagerProtocols.swift; sourceTree = "<group>"; };
@@ -151,6 +155,8 @@
 			children = (
 				7E26B8A82BC4ACEF00011E71 /* Sunrise+Stub.swift */,
 				7E36E2D92BC624BD002D02DB /* NetworkManagerMock.swift */,
+				7E36E2DB2BC627B0002D02DB /* SunsetAdapterMock.swift */,
+				7E36E2DD2BC62897002D02DB /* SunsetModel+Stub.swift */,
 			);
 			path = Doubles;
 			sourceTree = "<group>";
@@ -354,11 +360,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E36E2DE2BC62897002D02DB /* SunsetModel+Stub.swift in Sources */,
 				7E0AE8282BBF918300B16815 /* DummyURLSessionDataTask.swift in Sources */,
 				7E26B8A62BC4AAEB00011E71 /* SunsetAdapterTests.swift in Sources */,
 				7E36E2DA2BC624BD002D02DB /* NetworkManagerMock.swift in Sources */,
 				7E0AE8262BBF90A000B16815 /* URLSessionMock.swift in Sources */,
 				7E26B8A92BC4ACEF00011E71 /* Sunrise+Stub.swift in Sources */,
+				7E36E2DC2BC627B0002D02DB /* SunsetAdapterMock.swift in Sources */,
 				7E36E2D82BC622E9002D02DB /* SunsetViewModelTests.swift in Sources */,
 				7E0AE8232BBF7E6500B16815 /* NetworkManagerTests.swift in Sources */,
 			);
