@@ -115,11 +115,11 @@
 		7E26B8A22BC4AA6600011E71 /* Sunset */ = {
 			isa = PBXGroup;
 			children = (
+				7E36E2D52BC6211B002D02DB /* Adapter */,
 				7E36E2D42BC620D8002D02DB /* View */,
 				FA64859226CED5C2007570AE /* SunsetViewModel.swift */,
 				FACFD85526CEAEDD007360B3 /* SunsetViewController.swift */,
 				7E0AE8122BBF785C00B16815 /* SunsetProtocols.swift */,
-				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
 			);
 			path = Sunset;
 			sourceTree = "<group>";
@@ -155,6 +155,14 @@
 				FACFD85926CEAF5D007360B3 /* SunsetView.swift */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		7E36E2D52BC6211B002D02DB /* Adapter */ = {
+			isa = PBXGroup;
+			children = (
+				7EA59BEF2BC3396700EDFEDC /* SunsetAdapter.swift */,
+			);
+			name = Adapter;
 			sourceTree = "<group>";
 		};
 		FA64858C26CEB56D007570AE /* Managers */ = {
