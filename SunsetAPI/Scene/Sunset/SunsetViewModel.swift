@@ -23,13 +23,17 @@ final class SunsetViewModel {
 
     private func fetchData() {
         network.loadData { [weak self] result in
-            switch result {
-            case .success(let response):
-                guard let viewModel = self?.adapter.adapt(with: response) else { return }
-                self?.viewController?.show(viewModel: viewModel)
-            case .failure(let error):
-                print("\(error.localizedDescription)")
-            }
+            self?.handleResponse(with: result)
+        }
+    }
+
+    private func handleResponse(with result: APIResult) {
+        switch result {
+        case .success(let response):
+            let viewModel = adapter.adapt(with: response)
+            viewController?.show(viewModel: viewModel)
+        case .failure(let error):
+            print("\(error.localizedDescription)")
         }
     }
 }
