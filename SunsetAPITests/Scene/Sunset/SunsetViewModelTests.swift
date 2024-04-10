@@ -4,7 +4,11 @@ import XCTest
 final class SunsetViewModelTests: XCTestCase {
 
     func test_loadData_shouldCallNetworkLoadDataOnce() {
-//        let networkSpy = NetworkManagerSpy()
-        let sut = SunsetViewModel(network: <#T##NetworkManagerType#>)
+        let networkMock = NetworkManagerMock()
+        let sut = SunsetViewModel(network: networkMock)
+
+        sut.loadData()
+
+        XCTAssertEqual(networkMock.loadDataCallCount, 1)
     }
 }
