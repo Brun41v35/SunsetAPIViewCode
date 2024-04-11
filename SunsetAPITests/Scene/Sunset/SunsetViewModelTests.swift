@@ -36,4 +36,18 @@ final class SunsetViewModelTests: XCTestCase {
 
         XCTAssertEqual(viewController.showViewModelArgs, [.stub()])
     }
+
+    func test_loadData_whenResultIsFailure_shouldCallViewControllerShowAlertError() {
+        let networkMock = NetworkManagerMock()
+        networkMock.networkResponse = .failure(.unableToComplete)
+        let adapterMock = SunsetAdapterMock()
+        let viewController = SunsetViewControllerSpy()
+        let sut = SunsetViewModel(network: networkMock,
+                                  adapter: adapterMock)
+        sut.viewController = viewController
+
+        sut.loadData()
+
+        XCTAssertEqual(viewController.showAlertErrorCallCount, 1)
+    }
 }
