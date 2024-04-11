@@ -7,6 +7,7 @@ protocol SunsetViewModelType {
 
 protocol SunsetViewControllerType: AnyObject {
     func show(viewModel: SunsetModel)
+    func showAlertError()
 }
 
 protocol SunsetViewType where Self: UIView {
