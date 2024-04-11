@@ -43,6 +43,13 @@ final class SunsetViewController: UIViewController {
             self?.viewModel.loadData()
         }
     }
+
+    private func showAlert() {
+        let alert = UIAlertController(title: "Error",
+                                      message: "Something went wrong",
+                                      preferredStyle: .alert)
+        present(alert, animated: true)
+    }
 }
 
 // MARK: - SunsetViewType
@@ -53,5 +60,9 @@ extension SunsetViewController: SunsetViewControllerType {
         DispatchQueue.main.async {
             self.contentView.show(viewModel: viewModel)
         }
+    }
+
+    func showAlertError() {
+        showAlert()
     }
 }

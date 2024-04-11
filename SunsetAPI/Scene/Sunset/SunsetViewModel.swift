@@ -33,7 +33,7 @@ final class SunsetViewModel {
             let viewModel = adapter.adapt(with: response)
             viewController?.show(viewModel: viewModel)
         case .failure(let error):
-            print("\(error.localizedDescription)")
+            viewController?.showAlertError()
         }
     }
 }
