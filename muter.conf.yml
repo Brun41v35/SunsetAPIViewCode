@@ -1,0 +1,11 @@
+arguments:
+- -project
+- SunsetAPI.xcodeproj
+- -scheme
+- SunsetAPI
+- -destination
+- platform=iOS Simulator,name=iPhone SE (3rd generation)
+- test
+executable: /usr/bin/xcodebuild
+exclude: ["AppDelegate.swift", "SceneDelegate.swift"]
+excludeCalls: []
